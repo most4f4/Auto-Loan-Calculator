@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="420.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AmortizationController">
+   <children>
+      <Label minHeight="40.0" text="Amortization Schedule" textFill="#720808">
+         <font>
+            <Font name="Serif Regular" size="21.0" />
+         </font>
+         <VBox.margin>
+            <Insets bottom="10.0" />
+         </VBox.margin>
+      </Label>
+      <TableView fx:id="tableview" minHeight="320.0" prefHeight="200.0" prefWidth="200.0">
+        <columns>
+          <TableColumn fx:id="paymentNoCol" prefWidth="84.0" text="Payment No." />
+          <TableColumn fx:id="paymentDateCol" prefWidth="119.0" text="Payment Date" />
+            <TableColumn fx:id="paymentAmountCol" prefWidth="107.0" text="Payment Amount" />
+            <TableColumn fx:id="interestCol" prefWidth="110.0" text="Interest Payment" />
+            <TableColumn fx:id="principalPaymentCol" prefWidth="110.0" text="Principal Payment" />
+            <TableColumn fx:id="remainingBalanceCol" prefWidth="119.0" text="Remaining Balance" />
+        </columns>
+      </TableView>
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Button fx:id="closeBtn" minWidth="60.0" mnemonicParsing="false" onAction="#closeBtn" text="Close">
+               <HBox.margin>
+                  <Insets left="20.0" top="15.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</VBox>

@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AutoLoanController">
+   <center>
+      <VBox alignment="TOP_CENTER" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Separator prefWidth="200.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets bottom="10.0" />
+               </padding>
+            </Separator>
+            <Label contentDisplay="CENTER" text="Customer Information" textFill="#5e0000">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="10.0" />
+               </padding>
+               <font>
+                  <Font name="Sylfaen" size="17.0" />
+               </font>
+            </Label>
+            <GridPane vgap="5.0">
+              <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="294.0" minWidth="10.0" prefWidth="150.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="511.0" minWidth="10.0" prefWidth="437.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label contentDisplay="CENTER" prefHeight="17.0" prefWidth="50.0" text="Name" GridPane.halignment="LEFT">
+                     <GridPane.margin>
+                        <Insets left="20.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label prefWidth="50.0" text="Phone" GridPane.halignment="LEFT" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="20.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label prefWidth="50.0" text="City" GridPane.halignment="LEFT" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets left="20.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label prefWidth="50.0" text="Province" GridPane.halignment="LEFT" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets left="20.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <TextField fx:id="nameTF" prefHeight="25.0" prefWidth="320.0" GridPane.columnIndex="1">
+                     <GridPane.margin>
+                        <Insets right="50.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <TextField fx:id="phoneTF" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets right="50.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <TextField fx:id="cityTF" prefHeight="25.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets right="50.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <ComboBox fx:id="provinceComB" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </GridPane>
+            <Label text="Vehicle Information" textFill="#5e0000">
+               <font>
+                  <Font name="Sylfaen" size="17.0" />
+               </font>
+               <padding>
+                  <Insets bottom="10.0" top="10.0" />
+               </padding>
+            </Label>
+            <GridPane vgap="5.0">
+              <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="295.0" minWidth="10.0" prefWidth="150.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="515.0" minWidth="10.0" prefWidth="433.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label prefWidth="50.0" text="Type" GridPane.halignment="LEFT">
+                     <GridPane.margin>
+                        <Insets left="20.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label prefWidth="50.0" text="Age" GridPane.halignment="LEFT" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="20.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label prefWidth="50.0" text="Price" GridPane.halignment="LEFT" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets left="20.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="1">
+                     <children>
+                        <RadioButton fx:id="carRB" mnemonicParsing="false" prefWidth="50.0" selected="true" text="Car">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="vehicleTypeGroup" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="truckRB" mnemonicParsing="false" prefWidth="50.0" text="Truck" toggleGroup="$vehicleTypeGroup" />
+                        <RadioButton fx:id="vanRB" mnemonicParsing="false" text="Family Van" toggleGroup="$vehicleTypeGroup" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <RadioButton fx:id="newRB" mnemonicParsing="false" prefWidth="50.0" selected="true" text="New">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="vehicleAgeGroup" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="usedRB" mnemonicParsing="false" prefWidth="50.0" text="Used" toggleGroup="$vehicleAgeGroup" />
+                     </children>
+                  </HBox>
+                  <TextField fx:id="priceTF" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets right="50.0" />
+                     </GridPane.margin>
+                  </TextField>
+               </children>
+            </GridPane>
+            <Separator prefWidth="200.0">
+               <padding>
+                  <Insets bottom="10.0" top="10.0" />
+               </padding>
+            </Separator>
+            <Label text="Loan Information" textFill="#5e0000">
+               <padding>
+                  <Insets bottom="10.0" top="10.0" />
+               </padding>
+               <font>
+                  <Font name="Sylfaen" size="17.0" />
+               </font>
+            </Label>
+            <GridPane prefWidth="588.0" vgap="5.0">
+              <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="211.0" minWidth="10.0" prefWidth="150.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="471.0" minWidth="435.0" prefWidth="450.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="56.0" minHeight="36.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="27.0" minHeight="0.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label prefWidth="110.0" text="Down Payment" GridPane.halignment="LEFT">
+                     <GridPane.margin>
+                        <Insets left="20.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label prefWidth="110.0" text="Interest Rate" GridPane.halignment="LEFT" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="20.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label prefWidth="110.0" text="Loan Duration" GridPane.halignment="LEFT" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets left="20.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label prefWidth="110.0" text="Payment Frequency" GridPane.halignment="LEFT" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets left="20.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <TextField fx:id="downPaymentTF" GridPane.columnIndex="1">
+                     <GridPane.margin>
+                        <Insets right="50.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <HBox prefHeight="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <RadioButton fx:id="interest099RB" mnemonicParsing="false" prefWidth="60.0" text="0.99%">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="interestRateGroup" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="interest199RB" mnemonicParsing="false" prefWidth="60.0" selected="true" text="1.99%" toggleGroup="$interestRateGroup" />
+                        <RadioButton fx:id="interest299RB" mnemonicParsing="false" prefWidth="60.0" text="2.99%" toggleGroup="$interestRateGroup" />
+                        <RadioButton fx:id="interestOtherRB" mnemonicParsing="false" prefWidth="60.0" text="Other" toggleGroup="$interestRateGroup" />
+                        <TextField fx:id="otherInterestRateTF" disable="true" promptText="Interest Rate" HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                     <GridPane.margin>
+                        <Insets right="50.0" />
+                     </GridPane.margin>
+                  </HBox>
+                  <Slider fx:id="loanDurationSlider" blockIncrement="12.0" majorTickUnit="12.0" max="96.0" min="12.0" minorTickCount="0" showTickLabels="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets right="50.0" top="20.0" />
+                     </GridPane.margin>
+                  </Slider>
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <children>
+                        <RadioButton fx:id="weeklyRB" mnemonicParsing="false" prefWidth="75.0" text="Weekly">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="paymentFreqGroup" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="biWeeklyRB" mnemonicParsing="false" prefWidth="75.0" selected="true" text="Bi-Weekly" toggleGroup="$paymentFreqGroup" />
+                        <RadioButton fx:id="monthlyRB" mnemonicParsing="false" prefWidth="75.0" text="Monthly" toggleGroup="$paymentFreqGroup" />
+                     </children>
+                  </HBox>
+               </children>
+            </GridPane>
+            <HBox alignment="CENTER" prefHeight="50.0" spacing="10.0">
+               <children>
+                  <Button fx:id="clearBtn" mnemonicParsing="false" onAction="#clearBtn" text="Clear" />
+                  <Button fx:id="calculateBtn" mnemonicParsing="false" onAction="#calculateBtn" text="Calculate" />
+                  <Button fx:id="saveRatesBtn" mnemonicParsing="false" onAction="#saveRatesBtn" text="Save Rates" />
+                  <Button fx:id="showRatesBtn" mnemonicParsing="false" onAction="#showRatesBtn" text="Show Saved Rates" />
+                  <Button fx:id="amortizationBtn" mnemonicParsing="false" onAction="#amortizationBtn" text="Show Amortization Schedule" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+   <top>
+      <Label text="Auto Loan Application" textFill="#900000" BorderPane.alignment="CENTER">
+         <padding>
+            <Insets bottom="20.0" top="20.0" />
+         </padding>
+         <font>
+            <Font name="Sylfaen" size="18.0" />
+         </font>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </Label>
+   </top>
+   <bottom>
+      <Label fx:id="statusLabel" text="" textFill="#a10000" BorderPane.alignment="CENTER_LEFT">
+         <BorderPane.margin>
+            <Insets bottom="20.0" left="20.0" />
+         </BorderPane.margin>
+      </Label>
+   </bottom>
+</BorderPane>
